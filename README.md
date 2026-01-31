@@ -6,7 +6,7 @@ Aplikacja Książka Telefoniczna (Phonebook) to interaktywne narzędzie do zarz�
 
 ## 🌐 Demo
 
-Zobacz stronę online: [Książka Telefoniczna (Phonebook)](https://brzozanet.github.io/project-phonebook/)
+Zobacz stronę online: [Książka Telefoniczna (Phonebook)](https://brzozanet.github.io/phonebook/)
 
 ## 🛠 Użyte technologie
 
@@ -58,8 +58,8 @@ src/
 1. Sklonuj repozytorium:
 
    ```bash
-   git clone https://github.com/brzozanet/project-phonebook.git
-   cd project-phonebook
+   git clone https://github.com/brzozanet/phonebook.git
+   cd phonebook
    ```
 
 2. Zainstaluj zależności:
@@ -78,7 +78,7 @@ Aplikacja będzie dostępna pod adresem: [http://localhost:3000](http://localhos
 ## 🌐 Wersja produkcyjna
 
 Wersja produkcyjna aplikacji jest dostępna pod adresem:
-[https://brzozanet.github.io/project-phonebook/](https://brzozanet.github.io/project-phonebook/)
+[https://brzozanet.github.io/phonebook/](https://brzozanet.github.io/phonebook/)
 
 ## 👤 Logowanie testowego użytkownika:
 
@@ -102,4 +102,4 @@ testing
 
 <br>
 
-![Screenshot App](https://raw.githubusercontent.com/brzozanet/project-phonebook/main/src/images/gh-cover-goit-react-phonebook.jpg)
+![Screenshot App](https://raw.githubusercontent.com/brzozanet/phonebook/main/src/images/gh-cover-goit-react-phonebook.jpg)
