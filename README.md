@@ -118,4 +118,8 @@ testing
 
 <br>
 
-![Screenshot App](https://raw.githubusercontent.com/brzozanet/phonebook/main/src/images/gh-cover-goit-react-phonebook.jpg)
+![Screenshot App](https://raw.githubusercontent.com/brzozanet/phonebook/main/src/images/gh-cover-goit-react-phonebook-1.jpg)
+
+<br>
+
+![Screenshot App](https://raw.githubusercontent.com/brzozanet/phonebook/main/src/images/gh-cover-goit-react-phonebook-2.jpg)
