@@ -1,19 +1,18 @@
 import { login } from "../../redux/auth/operations";
 import { useDispatch } from "react-redux";
-import { Button, TextField } from "@mui/material";
 
 const css = {
-  containerDiv: ["flex", "justify-center", "mt-28"].join(" "),
-  loginForm: [
-    "flex",
-    "flex-col",
-    "border-2",
-    "p-14",
-    "bg-white",
-    "rounded-2xl",
-    "shadow-lg",
+  containerDiv: ["mx-auto", "max-w-lg"].join(" "),
+  loginForm: ["card", "space-y-5", "p-6", "sm:p-8"].join(" "),
+  heading: ["text-2xl", "font-bold", "text-slate-900"].join(" "),
+  label: ["block", "space-y-2"].join(" "),
+  hint: [
+    "text-xs",
+    "font-semibold",
+    "uppercase",
+    "tracking-wide",
+    "text-slate-500",
   ].join(" "),
-  label: "mb-5",
 };
 
 export const LoginForm = () => {
@@ -34,28 +33,33 @@ export const LoginForm = () => {
   return (
     <div className={css.containerDiv}>
       <form onSubmit={handleSubmit} className={css.loginForm}>
+        <h2 className={css.heading}>Sign in</h2>
         <label className={css.label}>
-          <TextField
+          <span className={css.hint}>Email</span>
+          <input
             id="login-email-input"
-            label="Email"
             type="email"
             name="email"
             autoComplete="email"
             autoFocus
+            className="field"
+            placeholder="you@example.com"
           />
         </label>
         <label className={css.label}>
-          <TextField
+          <span className={css.hint}>Password</span>
+          <input
             id="login-password-input"
-            label="Password"
             type="password"
             name="password"
             autoComplete="current-password"
+            className="field"
+            placeholder="Enter your password"
           />
         </label>
-        <Button type="submit" variant="contained">
+        <button type="submit" className="btn-primary w-full">
           Login
-        </Button>
+        </button>
       </form>
     </div>
   );

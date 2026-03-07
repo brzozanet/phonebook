@@ -1,43 +1,32 @@
-import { Home } from "@mui/icons-material";
-import { Button } from "@mui/material";
 import { useAuth } from "hooks/useAuth";
 import { NavLink } from "react-router-dom";
+
+const navLinkClass = ({ isActive }) =>
+  [
+    "rounded-xl",
+    "px-3",
+    "py-2",
+    "text-sm",
+    "font-semibold",
+    "transition",
+    isActive
+      ? "bg-sky-500 text-white shadow-md shadow-sky-200"
+      : "text-slate-700 hover:bg-slate-100",
+  ].join(" ");
 
 export const Navigation = () => {
   const { isLoggedIn } = useAuth();
 
   return (
-    <div>
-      <Button
-        to="/"
-        component={NavLink}
-        sx={{
-          "&.active": {
-            color: "#00B4E5",
-            fontWeight: 600,
-            textDecoration: "underline",
-          },
-          paddingRight: "35px",
-        }}
-        startIcon={<Home />}
-      >
+    <nav className="flex items-center gap-2">
+      <NavLink to="/" className={navLinkClass}>
         Home
-      </Button>
+      </NavLink>
       {isLoggedIn && (
-        <Button
-          to="/contacts"
-          component={NavLink}
-          sx={{
-            "&.active": {
-              color: "#00B4E5",
-              fontWeight: 600,
-              textDecoration: "underline",
-            },
-          }}
-        >
+        <NavLink to="/contacts" className={navLinkClass}>
           Contacts
-        </Button>
+        </NavLink>
       )}
-    </div>
+    </nav>
   );
 };

@@ -1,21 +1,20 @@
-import { Button, TextField } from "@mui/material";
 import { useDispatch } from "react-redux";
-import { ToastContainer } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { register } from "../../redux/auth/operations";
 
 const css = {
-  containerDiv: ["flex", "justify-center", "pt-32"].join(" "),
-  registerForm: [
-    "flex",
-    "flex-col",
-    "border-2",
-    "p-14",
-    "bg-white",
-    "rounded-2xl",
-    "shadow-lg",
+  containerDiv: ["mx-auto", "max-w-lg"].join(" "),
+  registerForm: ["card", "space-y-5", "p-6", "sm:p-8"].join(" "),
+  heading: ["text-2xl", "font-bold", "text-slate-900"].join(" "),
+  label: ["block", "space-y-2"].join(" "),
+  hint: [
+    "text-xs",
+    "font-semibold",
+    "uppercase",
+    "tracking-wide",
+    "text-slate-500",
   ].join(" "),
-  label: "mb-5",
 };
 
 export const RegisterForm = () => {
@@ -30,11 +29,11 @@ export const RegisterForm = () => {
       password: form.elements.password.value,
     };
 
-    if (registerData.name.lenght < 2) {
-      return ToastContainer.error("Name must be at least 2 characters long", {
+    if (registerData.name.length < 2) {
+      return toast.error("Name must be at least 2 characters long", {
         position: "top-right",
         autoClose: 3000,
-        hideprogressBar: false,
+        hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
@@ -49,42 +48,49 @@ export const RegisterForm = () => {
   return (
     <div className={css.containerDiv}>
       <form onSubmit={handleSubmit} className={css.registerForm}>
+        <h2 className={css.heading}>Create account</h2>
         <label className={css.label}>
-          <TextField
+          <span className={css.hint}>Name</span>
+          <input
             id="register-name-input"
-            label="Name"
             type="text"
             name="username"
             autoComplete="off"
             autoFocus
+            className="field"
+            placeholder="Your full name"
           />
         </label>
         <label className={css.label}>
-          <TextField
+          <span className={css.hint}>Email</span>
+          <input
             id="register-email-input"
-            label="Email"
             type="email"
             name="email"
             autoComplete="off"
+            className="field"
+            placeholder="you@example.com"
           />
         </label>
         <label className={css.label}>
-          <TextField
+          <span className={css.hint}>Password</span>
+          <input
             id="register-password-input"
-            label="Password"
             type="password"
             name="password"
             autoComplete="off"
+            className="field"
+            placeholder="Minimum 7 characters"
           />
         </label>
-        <Button type="submit" variant="contained">
+        <button type="submit" className="btn-primary w-full">
           Register
-        </Button>
+        </button>
       </form>
       <ToastContainer
         position="top-right"
         autoClose={3000}
-        hideprogressBar={false}
+        hideProgressBar={false}
         newestOnTop={false}
         closeOnClick
         pauseOnFocusLoss

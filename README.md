@@ -25,6 +25,22 @@ Zobacz stronę online: [Książka Telefoniczna (Phonebook)](https://brzozanet.gi
 - **Axios** (obsługa zapytań HTTP do API)
 - **REST API** (komunikacja z serwerem poprzez interfejs RESTful)
 
+## 🔌 Backend API
+
+Aplikacja korzysta z zewnętrznego backendu udostępnionego przez GoIT:
+
+- **Base URL:** `https://connections-api.goit.global`
+
+Przykładowe endpointy używane przez frontend:
+
+- `POST /users/signup`
+- `POST /users/login`
+- `POST /users/logout`
+- `GET /users/current`
+- `GET /contacts`
+- `POST /contacts`
+- `DELETE /contacts/:id`
+
 ## 📂 Struktura aplikacji
 
 ```
@@ -96,7 +112,9 @@ testing
 
 ## 📝 Uwagi
 
-- Aplikacja wymaga połączenia z bazą danych do prawidłowego działania
+- Aplikacja wymaga aktywnego połączenia z zewnętrznym API do prawidłowego działania
+- API jest utrzymywane przez szkołę programowania GoIT: `https://connections-api.goit.global`
+- Kod backendu nie jest częścią tego repozytorium, dlatego nie mam wpływu na jego dostępność, konfigurację, limity ani ewentualne awarie
 - Wszystkie dane są przechowywane w bezpieczny sposób
 - Interfejs jest w pełni responsywny i dostosowany do urządzeń mobilnych
 

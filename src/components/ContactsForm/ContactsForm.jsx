@@ -1,20 +1,19 @@
 import { useDispatch, useSelector } from "react-redux";
 import { addContact } from "../../redux/contacts/operations";
 import { selectContacts } from "../../redux/contacts/selectors";
-import { Button, TextField } from "@mui/material";
 
 const css = {
-  containerDiv: ["flex", "justify-center", "mt-5"].join(" "),
-  contactForm: [
-    "flex",
-    "flex-col",
-    "bg-white",
-    "border-2",
-    "p-8",
-    "rounded-2xl",
-    "shadow-lg",
+  containerDiv: ["w-full"].join(" "),
+  contactForm: ["card", "space-y-5", "p-6"].join(" "),
+  heading: ["text-xl", "font-bold", "text-slate-900"].join(" "),
+  label: ["block", "space-y-2"].join(" "),
+  hint: [
+    "text-xs",
+    "font-semibold",
+    "uppercase",
+    "tracking-wide",
+    "text-slate-500",
   ].join(" "),
-  label: "mb-5",
 };
 
 export const ContactsForm = () => {
@@ -43,29 +42,32 @@ export const ContactsForm = () => {
   return (
     <div className={css.containerDiv}>
       <form className={css.contactForm} onSubmit={handleSubmit}>
+        <h3 className={css.heading}>Add new contact</h3>
         <label className={css.label}>
-          <TextField
+          <span className={css.hint}>Name</span>
+          <input
             type="text"
-            size="small"
             name="name"
-            label="Name"
             title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
             required
+            className="field"
+            placeholder="e.g. Adrian"
           />
         </label>
         <label className={css.label}>
-          <TextField
+          <span className={css.hint}>Phone number</span>
+          <input
             type="tel"
-            size="small"
             name="number"
-            label="Number"
             title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
             required
+            className="field"
+            placeholder="+48 123 456 789"
           />
         </label>
-        <Button type="submit" variant="contained">
+        <button type="submit" className="btn-primary w-full">
           Add contact
-        </Button>
+        </button>
       </form>
     </div>
   );

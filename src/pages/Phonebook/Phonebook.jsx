@@ -6,8 +6,9 @@ import { useSelector } from "react-redux";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 
 const css = {
-  containerDiv: ["flex", "mb-4", "gap-4"].join(" "),
-  contactsDiv: ["mt-6"],
+  containerDiv: ["grid", "gap-6", "md:grid-cols-[340px,1fr]"].join(" "),
+  stack: ["space-y-4"].join(" "),
+  contactsDiv: ["card", "p-6", "sm:p-7"].join(" "),
 };
 
 const Phonebook = () => {
@@ -21,13 +22,24 @@ const Phonebook = () => {
           <title>Phonebook</title>
         </Helmet>
       </HelmetProvider>
-      <div>
+      <div className={css.stack}>
         <ContactsForm />
         <Filter />
       </div>
       <div className={css.contactsDiv}>
-        {isLoading ? <p>Loading contacts...</p> : <ContactsList />}
-        {isError && <p>Something went wrong. Try again later.</p>}
+        <h2 className="mb-4 text-2xl font-bold text-slate-900">
+          Your contacts
+        </h2>
+        {isLoading ? (
+          <p className="text-sm text-slate-500">Loading contacts...</p>
+        ) : (
+          <ContactsList />
+        )}
+        {isError && (
+          <p className="mt-4 text-sm font-medium text-rose-600">
+            Something went wrong. Try again later.
+          </p>
+        )}
       </div>
     </div>
   );

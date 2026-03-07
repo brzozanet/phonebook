@@ -3,7 +3,19 @@ import { useAuth } from "hooks/useAuth";
 import { Navigation } from "../Navigation/Navigation";
 import { UserMenu } from "../UserMenu/UserMenu";
 
-const css = ["flex", "justify-between", "border-b-2", "pb-3", "mb-2"].join(" ");
+const css = [
+  "card",
+  "sticky",
+  "top-4",
+  "z-20",
+  "flex",
+  "flex-col",
+  "gap-3",
+  "p-4",
+  "sm:flex-row",
+  "sm:items-center",
+  "sm:justify-between",
+].join(" ");
 
 export const AppBar = () => {
   const { isLoggedIn } = useAuth();

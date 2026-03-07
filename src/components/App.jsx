@@ -8,17 +8,21 @@ import { refreshUser } from "../redux/auth/operations";
 import { useAuth } from "hooks/useAuth";
 import { Layout } from "../layouts/RootLayout/RootLayout";
 
-const LoginPage = lazy(() =>
-  import("pages/Login/Login" /* webpackChunkName: "login-page" */)
+const LoginPage = lazy(
+  () => import("pages/Login/Login" /* webpackChunkName: "login-page" */),
 );
-const RegisterPage = lazy(() =>
-  import("pages/Register/Register" /* webpackChunkName: "register-page" */)
+const RegisterPage = lazy(
+  () =>
+    import("pages/Register/Register" /* webpackChunkName: "register-page" */),
 );
-const PhonebookPage = lazy(() =>
-  import("pages/Phonebook/Phonebook" /* webpackChunkName: "phonebook-page" */)
+const PhonebookPage = lazy(
+  () =>
+    import(
+      "pages/Phonebook/Phonebook" /* webpackChunkName: "phonebook-page" */
+    ),
 );
-const HomePage = lazy(() =>
-  import("pages/Home/Home" /* webpackChunkName: "home-page" */)
+const HomePage = lazy(
+  () => import("pages/Home/Home" /* webpackChunkName: "home-page" */),
 );
 
 export const App = () => {
@@ -31,8 +35,8 @@ export const App = () => {
   }, [dispatch, isLoggedIn]);
 
   return (
-    <div className="flex flex-col items-center pt-4">
-      <div className="w-4/6">
+    <div className="flex min-h-screen flex-col px-4 py-4 sm:px-6 lg:px-8">
+      <div className="mx-auto w-full max-w-6xl flex-1">
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<HomePage />} />
@@ -66,6 +70,18 @@ export const App = () => {
           </Route>
         </Routes>
       </div>
+
+      <footer className="pt-6 text-center text-sm text-black">
+        Made with ❤️ by{" "}
+        <a
+          href="https://brzoza.net"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-black underline decoration-black underline-offset-2 transition-colors duration-200 hover:text-slate-700"
+        >
+          brzoza.net
+        </a>
+      </footer>
     </div>
   );
 };
