@@ -1,5 +1,9 @@
 # ☎ Phonebook. Clarity for your contacts
 
+![Screenshot App](https://raw.githubusercontent.com/brzozanet/phonebook/main/src/images/gh-cover-goit-react-phonebook-1.jpg)
+
+![Screenshot App](https://raw.githubusercontent.com/brzozanet/phonebook/main/src/images/gh-cover-goit-react-phonebook-2.jpg)
+
 Aplikacja Książka Telefoniczna (Phonebook) to interaktywne narzędzie do zarządzania kontaktami, stworzone przy użyciu React i Redux. Umożliwia użytkownikom tworzenie osobistej książki telefonicznej z funkcjami rejestracji, logowania oraz zarządzania kontaktami.
 
 ## 🌐 Demo
@@ -115,11 +119,3 @@ testing
 - Kod backendu nie jest częścią tego repozytorium, dlatego nie mam wpływu na jego dostępność, konfigurację, limity ani ewentualne awarie
 - Wszystkie dane są przechowywane w bezpieczny sposób
 - Interfejs jest w pełni responsywny i dostosowany do urządzeń mobilnych
-
-<br>
-
-![Screenshot App](https://raw.githubusercontent.com/brzozanet/phonebook/main/src/images/gh-cover-goit-react-phonebook-1.jpg)
-
-<br>
-
-![Screenshot App](https://raw.githubusercontent.com/brzozanet/phonebook/main/src/images/gh-cover-goit-react-phonebook-2.jpg)
