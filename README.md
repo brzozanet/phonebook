@@ -1,4 +1,4 @@
-# ☎ Phonebook. Manage contacts with calm and clarity
+# ☎ Phonebook. Clarity for your contacts
 
 Aplikacja Książka Telefoniczna (Phonebook) to interaktywne narzędzie do zarządzania kontaktami, stworzone przy użyciu React i Redux. Umożliwia użytkownikom tworzenie osobistej książki telefonicznej z funkcjami rejestracji, logowania oraz zarządzania kontaktami.
 
