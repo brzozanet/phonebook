@@ -4,7 +4,7 @@
 
 ![Screenshot App](https://raw.githubusercontent.com/brzozanet/phonebook/main/src/images/gh-cover-goit-react-phonebook-2.jpg)
 
-Aplikacja Książka Telefoniczna (Phonebook) to interaktywne narzędzie do zarządzania kontaktami, stworzone przy użyciu React i Redux. Umożliwia użytkownikom tworzenie osobistej książki telefonicznej z funkcjami rejestracji, logowania oraz zarządzania kontaktami..
+Aplikacja Książka Telefoniczna (Phonebook) to interaktywne narzędzie do zarządzania kontaktami, stworzone przy użyciu React i Redux. Umożliwia użytkownikom tworzenie osobistej książki telefonicznej z funkcjami rejestracji, logowania oraz zarządzania kontaktami.
 
 ## 🌐 Demo
 
